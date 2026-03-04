@@ -8,7 +8,7 @@ Make sure you read through and understand the challenge, then work through your 
 
 ## Getting Started
 
-- [ ] Fork and clone this repository. If you need a refresher, just follow the instructions found [here](https://github.com/CodesmithLLC/dev-environment-setup/blob/main/fork-clone.md)!
+- [x] Fork and clone this repository. If you need a refresher, just follow the instructions found [here](https://github.com/CodesmithLLC/dev-environment-setup/blob/main/fork-clone.md)!
 
 Next, follow these steps in order to link the cloned repository in your local dev environment with the original repository on CodesmithLLC's GitHub.
 
@@ -31,7 +31,7 @@ Next, follow these steps in order to link the cloned repository in your local de
 
 NOTE: You shouldn't ever need to create additional files. The **only way** new files should be created is by pulling from upstream main.
 
-- [ ] Run `npm install` to install any dependencies
+- [x] Run `npm install` to install any dependencies
 - [ ] Run `npm test` to start the test runner
 
 ## Testing

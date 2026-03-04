@@ -1,0 +1,17 @@
+ALWAYS:
+1. Talk out loud!
+    a. What is the problem I need to solve?
+    b. What are the inputs and outputs (or what do I already know)?
+    c. What approach do I plan to take?
+    d. What am I doing as I do it?
+2. Pseudocode!
+    a. keep it minimal, but outline your approach
+
+Fizzbuzz notes:
+* Didn't know how to create an array from a single number   
+    - Array.from is the modern method
+* Wrote a bunch of conditional statements
+    - probably better to write with switch cases (try that next)
+    -NO, SWITCH CASES ARE NOT MORE EFFICIENT
+* To make this more efficient, do the functional checking inside the Array.from instead of saving to a variable and then mapping
+* save the different if possibilities to variables for cleaner conditionals

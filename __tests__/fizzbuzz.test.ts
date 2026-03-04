@@ -31,7 +31,7 @@ describe('fizzbuzz', () => {
   });
 });
 
-describe.skip('fizzbuzzbazz', () => {
+describe('fizzbuzzbazz', () => {
   const arr = fizzbuzzbazz(105);
 
   it('should return an array of length num', () => {
