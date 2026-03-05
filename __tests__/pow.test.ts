@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { pow, powRecurse } from '../challenges/pow';
 
-describe('pow', () => {
+describe.skip('pow', () => {
   it('returns 1 when the power is 0', () => {
     expect(pow(5, 0)).toEqual(1);
   });
@@ -17,7 +17,7 @@ describe('pow', () => {
   });
 });
 
-describe.skip('powRecurse', () => {
+describe('powRecurse', () => {
   it('returns 1 when the power is 0', () => {
     expect(powRecurse(5, 0)).toEqual(1);
   });

@@ -1,3 +1,10 @@
+BETTER COMMENTS:
+//!	Red/Alert	Marks critical issues or warnings that require immediate attention.	
+//?	Blue/Query	Highlights a question or a query about the code logic.	
+// TODO	Orange/Task	Creates a reminder for an unfinished task or feature.	
+//*	Green/Highlight	Emphasizes important information or highlights a specific section.	
+////	Strikethrough	Visually crosses out commented-out code to indicate it shouldn't be there.	/
+
 ALWAYS:
 1. Talk out loud!
     a. What is the problem I need to solve?
@@ -15,3 +22,6 @@ Fizzbuzz notes:
     -NO, SWITCH CASES ARE NOT MORE EFFICIENT
 * To make this more efficient, do the functional checking inside the Array.from instead of saving to a variable and then mapping
 * save the different if possibilities to variables for cleaner conditionals
+
+POW notes:
+* think about iteration - it's not just for arrays
