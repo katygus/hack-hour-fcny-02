@@ -1,4 +1,5 @@
 Notice the PATTERNS. Which patterns fit which algos?
+LOOK BACK at old files (make sure they're finished and/or refactor)
 
 BETTER COMMENTS:
 //!	Red/Alert	Marks critical issues or warnings that require immediate attention.	
@@ -31,3 +32,6 @@ POW notes:
 DUPLICATE-NUMBERS notes:
 * can do this by caching
 * extension - look into  Floyd's Cycle-Finding Algorithm (Tortoise and Hare)
+
+TWO-SUM notes:
+* 
