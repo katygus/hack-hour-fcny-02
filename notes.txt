@@ -1,3 +1,5 @@
+Notice the PATTERNS. Which patterns fit which algos?
+
 BETTER COMMENTS:
 //!	Red/Alert	Marks critical issues or warnings that require immediate attention.	
 //?	Blue/Query	Highlights a question or a query about the code logic.	
@@ -25,3 +27,7 @@ Fizzbuzz notes:
 
 POW notes:
 * think about iteration - it's not just for arrays
+
+DUPLICATE-NUMBERS notes:
+* can do this by caching
+* extension - look into  Floyd's Cycle-Finding Algorithm (Tortoise and Hare)

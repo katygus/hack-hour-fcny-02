@@ -4,7 +4,7 @@ import {
   duplicateNumberAdvanced,
 } from '../challenges/duplicate-number';
 
-describe('duplicateNumber', () => {
+describe.skip('duplicateNumber', () => {
   let arr: number[];
 
   it('should return duplicate number in a sorted array', () => {
@@ -25,7 +25,7 @@ describe('duplicateNumber', () => {
   });
 });
 
-describe.skip('duplicateNumberAdvanced', () => {
+describe('duplicateNumberAdvanced', () => {
   let arr: number[];
 
   it('should return duplicate number in an unsorted array', () => {
