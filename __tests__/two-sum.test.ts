@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { twoSum, threeSum } from '../challenges/two-sum';
 
-describe('twoSum', () => {
+describe.skip('twoSum', () => {
   let arr: number[];
 
   it('should return true if two positive numbers sum to n', () => {
@@ -41,7 +41,7 @@ describe('twoSum', () => {
   });
 });
 
-describe.skip('threeSum', () => {
+describe('threeSum', () => {
   let arr: number[];
 
   it('should return true if three positive numbers sum to n', () => {

@@ -34,4 +34,18 @@ DUPLICATE-NUMBERS notes:
 * extension - look into  Floyd's Cycle-Finding Algorithm (Tortoise and Hare)
 
 TWO-SUM notes:
-* 
+* did crudest solve. how do i improve space time?  not multiple loops
+* how do I use the difference variable?
+
+* try by creating a hashmap
+* then check if the map has a value = diff
+
+Three-sum extension:
+* doesn't work with a hashmap, have to use two pointers, one right after arr[i] and one at very end, then add all 3
+    * this doesn't work because b always stays the same; 
+    * have to sort array first
+    * assign a and b inside the loop (only assign to indices, not values)
+    * for loop through array
+    * while a < b, check the sum, then increment a and decrement b 
+
+Still not working!
