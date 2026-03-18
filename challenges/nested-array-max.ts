@@ -7,13 +7,7 @@ Assume all arrays are non-empty and all elements in each array are numbers.
 
 Ex:
 
-const arrFlat = [1, 3, 10, 6];
-nestedArrMax(arrFlat);
--> 10
 
-const arrNested = [1, [3, [10], 6]];
-nestedArrMax(arrNested);
--> 10
 
 */
 type NestedNumberArray = [
@@ -21,10 +15,31 @@ type NestedNumberArray = [
   ...(number | NestedNumberArray)[]
 ];
 
+// this is a sliding window problem. I look at each subarray (array up to next nest) at a time
+// the window starts at the current largest number and goes to the last number (non array element)
+
 const nestedArrMax = (arr: NestedNumberArray): number | undefined => {
-  return undefined;
+  // variable to track largest value
+  let maxNum = 0;
+  // iterate over array
+  for (let i = 0; i < arr.length; i++) {
+        // if element type is number, if it is larger than largest var, reassign largest var to new element
+      if (typeof arr[i] === 'number') {
+        
+      }
+    // if element type is array, pass the element(array) into recursive call
+  }
+
+  return 0;
 };
 
+const arrFlat = [1, 3, 10, 6];
+nestedArrMax(arrFlat);
+//-> 10
+
+// const arrNested = [1, [3, [10], 6]];
+// nestedArrMax(arrNested);
+//-> 10
 /*
 
 Extension:
