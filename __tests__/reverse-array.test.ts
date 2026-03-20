@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { reverseArray, reverseSentence } from '../challenges/reverse-array';
 
-describe('reverseArray', () => {
+describe.skip('reverseArray', () => {
   let arr: number[], reversed: number[];
 
   it('reverses an empty array', () => {
@@ -41,7 +41,7 @@ describe('reverseArray', () => {
   });
 });
 
-describe.skip('reverseSentence', () => {
+describe('reverseSentence', () => {
   let sentence: string, reversed: string;
   it('returns a single word unchanged', () => {
     sentence = 'hello';

@@ -22,15 +22,52 @@ is within "depth 3". No number is deeper.
 
 */
 
+//input: nested array of numbers, depth
+//output: flat array of nums in order from provided depth and lesser depth
+
+/*
+* need to know the value of each element and its depth up to the passed in depth
+* variable for return array
+* 
+* Check if depth <= passed in depth and el is not array
+    Push el to newArray
+If el is array, increment depth, reassign leftOvers to el
+Conditional check depth
+If depth > 1 and <= passed in depth, look through leftOvers
+If el is not array
+    Push el to newArray
+If el is array, increment depth, reassign leftOvers to el
+* 
+*/
 type NestedArr<T> = (T | NestedArr<T>)[];
 
 export const retrieveDepth = (
   arr: NestedArr<number>,
   depth: number
 ): number[] => {
+  const newArray: number[] = []; // array to return
+  console.log('newArray:', newArray);
+
+  let leftOvers: string | any[] = []; // array to hold nested arrays on iterations
+  console.log('leftOvers: ', leftOvers);
+
+  let depthCount = 1;
+
+  for (const el of arr) {
+      if (depthCount <= depth && !Array.isArray(el)) {
+        newArray.push(el);
+      }
+      else if (Array.isArray(el)) {
+        depth++;
+        leftOvers = el;
+      }
+      if (leftOvers.length > 0 && )
+  }
+
   return [];
 };
 
+console.log(retrieveDepth([2, [4, [7], 1], 5], 2)) //-> [2, 4, 1, 5]
 /*
 
 Extension:
