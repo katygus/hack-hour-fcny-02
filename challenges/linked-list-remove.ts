@@ -36,8 +36,32 @@ const linkedListRemove = <T>(
   ll: LinkedList<T>,
   val: T
 ): ListNode<T> | undefined => {
+// check if list has a head - no: undefined
+if (ll.head) {
+  let curr = ll.head; // create curr var 
+  let prev = null;// create prev var
+  let temp = null;
+ while (curr.next !== null) {// iter while curr.next is not null
+   if (curr.val === val) { // check val of curr against input
+    temp = curr.next;
+    // if matches and curr is the head, reassign head to curr.next, return curr
+    if (prev === null) {
+      ll.head = curr.next;
+      return curr;
+    }
+     prev.next = temp;
+     return curr;
+   }
+    
+   prev = curr;// no match - reassign prev to curr, reassign val of curr to curr.next
+   curr = curr.next;
+  }
+  return undefined;
+}
   return undefined;
 };
+
+// NOT YET SOLVED FOR SPACE TIME COMPLEXITY
 
 /*
 Extension #1: 
