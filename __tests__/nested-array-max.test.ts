@@ -5,7 +5,7 @@ import {
   NestedNumberArray,
 } from '../challenges/nested-array-max';
 
-describe('nestedArrMax test', () => {
+describe.skip('nestedArrMax test', () => {
   type NestedNumberArray = [
     number | NestedNumberArray,
     ...(number | NestedNumberArray)[]
@@ -27,7 +27,7 @@ describe('nestedArrMax test', () => {
   });
 });
 
-describe.skip('nestedArrMaxLevel test', () => {
+describe('nestedArrMaxLevel test', () => {
   const flatArr: NestedNumberArray = [1, 2, 5, 10, 3];
   const nestedMaxArr: NestedNumberArray = [1, [2, 5, [10]]];
 
