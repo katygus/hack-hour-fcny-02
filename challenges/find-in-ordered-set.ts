@@ -9,10 +9,42 @@ findInOrderedSet(nums, 0);  -> true
 findInOrderedSet(nums, 2);  -> false
 */
 
+//binary sort - divide array in half and see if target number is larger or smaller, then only check the corresponding half
+
 const findInOrderedSet = (array: number[], target: number): boolean => {
+
+  
+  let smlIdx = 0;
+  // var for largest index
+  let lgIdx = array.length -1;
+  if (array[smlIdx] > target || array[lgIdx] < target) return false;
+  // iter over array for as long as smlIdx <= lgIdx
+  while (smlIdx <= lgIdx) {
+  // find midpoint
+  let midIdx = Math.floor((smlIdx + lgIdx) / 2);
+ 
+  if (target === array[midIdx]) {
+    console.log('perfect match: ', array[midIdx]);
+    return true;
+  }
+ else if (target < array[midIdx]) {
+    lgIdx = midIdx - 1;
+    console.log('target is smaller, so now lgIdx: ', lgIdx);
+    continue;
+  }
+  else if (target > array[midIdx]) {
+    console.log('target is larger, so now smlIdx: ', smlIdx);
+    smlIdx = midIdx + 1;
+    continue;
+  }
+  console.log(`largest idx is ${lgIdx} and smallest idx is ${smlIdx}`);
+}
   return false;
 };
 
+const nums = [-3, 0, 8, 13, 37]
+findInOrderedSet(nums, 0);  //-> true
+// findInOrderedSet(nums, 2); //-> false
 /*
 Extension:
 
