@@ -24,35 +24,47 @@ After sorting, think about how to merge the intervals together.
 
 */
 /*
-* sort nested arrays
-* iter through array of arrays
-* slow and fast pointers inside of for or while loop
-* variable
-*/
+ * sort nested arrays
+ * iter through array of arrays
+ * slow and fast pointers inside of for or while loop
+ * variable
+ */
 
 export const mergeRanges = (intervals: number[][]): number[][] => {
   //sort the nested arrays (use the sort method passing in a, b where a[0] - b[0]
   intervals.sort((a, b) => a[0] - b[0]);
   let slow;
   let fast;
-
-  for (let i = 0; i < intervals.length; i++) {
+  let results: number[][] = [];
+  // iter until length -1 because we are comparing the current index with the next index
+  for (let i = 0; i < intervals.length - 1; i++) {
     slow = intervals[i];
-    fast = intervals[i+1];
-    console.log(`slow ${slow} and fast${fast}`)
+    fast = intervals[i + 1];
+
+    console.log(`slow ${slow} and fast${fast}`);
+
     if (fast[0] >= slow[0] && fast[0] <= slow[1]) {
-      console.log(`first fast: ${fast[0]} is within range of ${slow[0]} and ${slow[1]}`)
-     //TODO: figure out how to merge the two
+      console.log(
+        `first fast: ${fast[0]} is within range of ${slow[0]} and ${slow[1]}`,
+      );
+      //TODO: include nested arrays that don't need to be merged in the results array
+      results.push([slow[0], fast[1]]);
+      console.log(results);
+    } else {
+      console.log("no merge");
+      results.push(slow);
     }
-   else {
-    console.log("no merge");
-   }
-   // increment i an additional time so you skip nested arrays by 2
-   i += 1
   }
-  //TODO: create new array to return -> when condition is met, create new inner array with merged values and push to return array -> if condition is not met, just push the arrays to return array 
-  return [];
+  //TODO: figure out why it's not passing all tests
+  
+  return results;
 };
 
-const intervals = [[0, 1], [3, 5], [4, 8], [10, 12], [9, 10]]
+const intervals = [
+  [0, 1],
+  [3, 5],
+  [4, 8],
+  [10, 12],
+  [9, 10],
+];
 mergeRanges(intervals); //-> [[0, 1], [3, 8], [9, 12]]
