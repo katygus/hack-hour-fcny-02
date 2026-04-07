@@ -52,11 +52,10 @@ if (ll.head) {
      prev.next = temp;
      return curr;
    }
-    
-   prev = curr;// no match - reassign prev to curr, reassign val of curr to curr.next
+    // no match - reassign prev to curr, reassign val of curr to curr.next
+   prev = curr;
    curr = curr.next;
   }
-  return undefined;
 }
   return undefined;
 };

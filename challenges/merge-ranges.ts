@@ -23,7 +23,36 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 After sorting, think about how to merge the intervals together.
 
 */
+/*
+* sort nested arrays
+* iter through array of arrays
+* slow and fast pointers inside of for or while loop
+* variable
+*/
 
 export const mergeRanges = (intervals: number[][]): number[][] => {
+  //sort the nested arrays (use the sort method passing in a, b where a[0] - b[0]
+  intervals.sort((a, b) => a[0] - b[0]);
+  let slow;
+  let fast;
+
+  for (let i = 0; i < intervals.length; i++) {
+    slow = intervals[i];
+    fast = intervals[i+1];
+    console.log(`slow ${slow} and fast${fast}`)
+    if (fast[0] >= slow[0] && fast[0] <= slow[1]) {
+      console.log(`first fast: ${fast[0]} is within range of ${slow[0]} and ${slow[1]}`)
+     //TODO: figure out how to merge the two
+    }
+   else {
+    console.log("no merge");
+   }
+   // increment i an additional time so you skip nested arrays by 2
+   i += 1
+  }
+  //TODO: create new array to return -> when condition is met, create new inner array with merged values and push to return array -> if condition is not met, just push the arrays to return array 
   return [];
 };
+
+const intervals = [[0, 1], [3, 5], [4, 8], [10, 12], [9, 10]]
+mergeRanges(intervals); //-> [[0, 1], [3, 8], [9, 12]]
