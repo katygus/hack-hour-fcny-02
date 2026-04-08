@@ -18,6 +18,7 @@ and has 3 links.
 Notes:
   - A single node tree has a height of 0
   - An empty tree has a height of -1
+  my notes: height is determined by the number of links, not nodes
 */
 
 export class BinarySearchTree {
