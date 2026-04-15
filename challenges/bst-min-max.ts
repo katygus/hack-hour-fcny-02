@@ -34,7 +34,18 @@ class BinarySearchTree {
 }
 
 const bstMinMax = (root: BinarySearchTree): number => {
-  return 0;
+  let min = root;
+  let max = root;
+  //while left is not null, check the next value
+  while (min.left !== null) {
+    //keep going, then when it is null return that value
+    min = min.left;
+  }
+  while (max.right !== null) {
+    max = max.right;
+  }
+  let result = max.value - min.value;
+  return result;
 };
 
 /*
@@ -66,6 +77,8 @@ const lowestCommonAncestor = (
   p: BinarySearchTree,
   q: BinarySearchTree
 ): BinarySearchTree | null => {
+// check which is larger, p or q
+
   return root || null;
 };
 
