@@ -38,6 +38,7 @@ How can you make the code work in both environments? Is there a utility type tha
 
 */
 
+// when you modulo  a number below what you're dividing it by, it returns what you're dividing by (2 % 60 returns 2)
 class SecondClock {
   callback: (seconds: number) => void;
 
@@ -54,4 +55,5 @@ class SecondClock {
   }
 }
 
+console.log(120%60);
 export { SecondClock };
