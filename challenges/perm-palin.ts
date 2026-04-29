@@ -29,10 +29,42 @@
  *
  */
 
+// sanitize string (same case, no spaces, no non alphanumeric ch).
+//make freq map.  if all ch are an even number except 1, it's possible
+
 const permPalin = (str: string): boolean => {
-  return true; // Placeholder return value for type safety - replace for your solution
+  // variable to determine how many characters are odd
+  let numOdd = 0;
+  // convert string to lower case
+  const cleanStr = str.toLowerCase().replace((/[^a-zA-Z0-9]/g), '');
+  
+  // remove all characters
+  // create freq map of string
+ const freq: Record<string, number> = {};
+ for (const ch of cleanStr) {
+  freq[ch] = (freq[ch] || 0) + 1;
+
+ };
+   console.log(`cleanStr ${cleanStr} frequency ${JSON.stringify(freq)}`);
+  // if length of string is even, all ch must have even freq
+  if (cleanStr.length % 2 === 0) {
+    for (const key in freq) {
+      if(freq[key] % 2 !== 0) return false; 
+    }
+  }
+  // if length of string is odd, only 1 ch can have an odd freq
+  if (cleanStr.length % 2 !==0) {
+    console.log(`String of ${cleanStr} has an odd length`)
+    for (const key in freq) {
+      if(freq[key] %2 !== 0) numOdd += 1;
+    }
+    console.log("numOdd", numOdd)
+    if (numOdd > 1) return false;
+    else return true;
+  }
 };
 
+console.log(permPalin('cBa $ba'));
 /**
  * Bonus: Solve this with O(n) time complexity (linear time complexity) and O(1) space complexity
  * (constant space complexity).

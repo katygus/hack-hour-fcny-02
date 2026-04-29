@@ -24,8 +24,25 @@ An empty array "sums" to 0, which has an absolute difference from the target 6
 of 6.
 
 */
+// * a subset sum is any combination of numbers, including just one number
+// is there a number that's the same as target
+// are there two nums that add to the same as target
+
+// find the difference between the target and the curr ell
+// if the diff is 0, you return 0
+// if the diff is anything else, look for that diff in the array
+
+//TODO: I think this is a sliding window problem
 
 export const subsetSumClosest = (nums: number[], target: number): number => {
+  // if array is empty, return 0
+
+  // sort array
+  // if any els are the target num, return 0
+  // if any els summed together = target, return 0
+
+  // have smallestDiff var set to - Infinity
+  // two pointers to find sum of two vars starting at each end and moving inward
   return 0;
 };
 
@@ -71,7 +88,7 @@ A solution set is:
 
 export const generateCombinations = (
   nums: number[],
-  target: number
+  target: number,
 ): number[][] => {
   return [];
 };
